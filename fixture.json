@@ -1,0 +1,20 @@
+{
+  "risks": [
+    {
+      "id": "R-01",
+      "scenario": "Overprivileged production account",
+      "likelihood": 4,
+      "impact": 5,
+      "owner": "Platform",
+      "treatment": "Reduce permissions"
+    },
+    {
+      "id": "R-02",
+      "scenario": "Delayed test restore",
+      "likelihood": 2,
+      "impact": 3,
+      "owner": "Operations",
+      "treatment": "Schedule restore drill"
+    }
+  ]
+}
