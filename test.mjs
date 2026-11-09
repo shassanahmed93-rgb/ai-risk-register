@@ -4,3 +4,15 @@ import {analyze} from "./analyze.mjs";
 const sample = JSON.parse(readFileSync(new URL("./fixture.json", import.meta.url)));
 assert.deepEqual(analyze(sample)["high"], 1);
 console.log("Fixture passed");
+const comparison = {
+  "risks": [
+    {
+      "id": "R-03",
+      "scenario": "Infrequent lab interruption",
+      "likelihood": 1,
+      "impact": 2
+    }
+  ]
+};
+assert.deepEqual(analyze(comparison)["high"], 0);
+console.log("Comparison fixture passed");
